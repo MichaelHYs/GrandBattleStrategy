@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="722.0" prefWidth="1061.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.FXMLDocumentController">
+   <children>
+      <ImageView fitHeight="550.0" fitWidth="900.0" layoutY="27.0">
+         <image>
+            <Image url="@peta.png" />
+         </image>
+      </ImageView>
+      <MenuBar layoutY="1.0" prefHeight="26.0" prefWidth="872.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button fx:id="state_fra" layoutX="178.0" layoutY="366.0" mnemonicParsing="false" onAction="#atk_fra" text="FRANCE" />
+      <Label fx:id="div_fra" layoutX="201.0" layoutY="401.0" style="-fx-background-color: #ffffff;" text="10" />
+      <Button fx:id="state_ger" layoutX="370.0" layoutY="235.0" mnemonicParsing="false" text="GERMANY" />
+      <Label fx:id="div_ger" layoutX="402.0" layoutY="266.0" style="-fx-background-color: #ffffff;" text="30" />
+      <Button fx:id="state_gbr" layoutX="139.0" layoutY="221.0" mnemonicParsing="false" onAction="#atk_gbr" text="GREAT BRITAIN" />
+      <Label fx:id="div_gbr" layoutX="185.0" layoutY="254.0" style="-fx-background-color: #ffffff;" text="8" />
+      <Button fx:id="state_pol" layoutX="505.0" layoutY="234.0" mnemonicParsing="false" onAction="#atk_pol" text="POLAND" />
+      <Label fx:id="div_pol" layoutX="533.0" layoutY="269.0" style="-fx-background-color: #ffffff;" text="6" />
+      <Label layoutX="14.0" layoutY="34.0" text="TURN" />
+      <Label fx:id="turn" layoutX="104.0" layoutY="34.0" text="0" />
+      <Label layoutX="16.0" layoutY="60.0" text="Date" />
+      <Label fx:id="date" layoutX="106.0" layoutY="60.0" text="-" />
+      <Label fx:id="div_bel" layoutX="273.0" layoutY="288.0" style="-fx-background-color: #ffffff;" text="3" />
+      <Button fx:id="state_bel" layoutX="204.0" layoutY="284.0" mnemonicParsing="false" onAction="#atk_bel" text="BELGIUM" />
+      <Button fx:id="state_dutch" layoutX="244.0" layoutY="222.0" mnemonicParsing="false" onAction="#atk_dutch" text="NETHERLAND" />
+      <Label fx:id="div_dutch" layoutX="285.0" layoutY="257.0" style="-fx-background-color: #ffffff;" text="3" />
+      <Button fx:id="state_lux" layoutX="289.0" layoutY="284.0" mnemonicParsing="false" onAction="#atk_lux" prefHeight="18.0" prefWidth="90.0" text="LUXEMBURG" />
+      <Label fx:id="div_lux" layoutX="288.0" layoutY="310.0" style="-fx-background-color: #ffffff;" text="1" />
+      <Button fx:id="state_ita" layoutX="347.0" layoutY="392.0" mnemonicParsing="false" onAction="#atk_ita" text="ITALY" />
+      <Label fx:id="div_ita" layoutX="366.0" layoutY="427.0" style="-fx-background-color: #ffffff;" text="7" />
+      <Button fx:id="state_swi" layoutX="300.0" layoutY="323.0" mnemonicParsing="false" onAction="#atk_swi" text="SWISS" />
+      <Label fx:id="div_swi" layoutX="321.0" layoutY="358.0" style="-fx-background-color: #ffffff;" text="4" />
+      <TabPane layoutY="560.0" prefHeight="161.0" prefWidth="872.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="News">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="news" layoutX="14.0" layoutY="48.0" text="Label" />
+                        <Label layoutX="410.0" layoutY="14.0" text="The Berlin">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="nDate" layoutX="61.0" layoutY="19.0" text="Label" />
+                        <Label layoutX="14.0" layoutY="19.0" text="Date" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Action">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="25.0" text="pilih &quot;action&quot;" />
+                        <Label layoutX="14.0" layoutY="43.0" text="built &quot;Industrial Complex&quot;" />
+                        <Label layoutX="14.0" layoutY="85.0" text="built &quot;military factory&quot;" />
+                        <Button fx:id="civ" layoutX="199.0" layoutY="40.0" mnemonicParsing="false" onAction="#act_civ" text="pilih" />
+                        <Button fx:id="mil" layoutX="199.0" layoutY="82.0" mnemonicParsing="false" onAction="#act_mil" text="pilih" />
+                        <Label layoutX="261.0" layoutY="43.0" text="increase supply" />
+                        <Label layoutX="261.0" layoutY="85.0" text="improve worker condition" />
+                        <Button fx:id="supply" layoutX="469.0" layoutY="39.0" mnemonicParsing="false" onAction="#act_supply" text="pilih" />
+                        <Button fx:id="worker" layoutX="469.0" layoutY="81.0" mnemonicParsing="false" onAction="#act_worker" text="pilih" />
+                        <Label layoutX="550.0" layoutY="27.0" text="Status" />
+                        <Label layoutX="550.0" layoutY="45.0" text="industrial complex" />
+                        <Label layoutX="550.0" layoutY="87.0" text="military factory" />
+                        <Label layoutX="723.0" layoutY="85.0" text="stability" />
+                        <Label fx:id="total_stb" layoutX="782.0" layoutY="85.0" text="0" />
+                        <Label layoutX="803.0" layoutY="85.0" text="\%" />
+                        <Label layoutX="723.0" layoutY="43.0" text="supply" />
+                        <Label fx:id="total_supply" layoutX="782.0" layoutY="43.0" text="0" />
+                        <Label fx:id="total_civ" layoutX="686.0" layoutY="44.0" text="0" />
+                        <Label fx:id="total_mil" layoutX="686.0" layoutY="86.0" text="0" />
+                        <Label layoutX="408.0" layoutY="5.0" text="GERMANY" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Army Division">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <TitledPane animated="false" layoutX="872.0" layoutY="-1.0" prefHeight="722.0" prefWidth="202.0" text="Past Action">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Increase Rate" />
+                  <Label layoutX="14.0" layoutY="47.0" text="Industrial Complex" />
+                  <Label layoutX="14.0" layoutY="83.0" text="Military Factory" />
+                  <Label layoutX="14.0" layoutY="120.0" text="Supply" />
+                  <Label layoutX="14.0" layoutY="152.0" text="Stability" />
+                  <Label fx:id="count_civ" layoutX="159.0" layoutY="47.0" text="0" />
+                  <Label fx:id="count_mil" layoutX="159.0" layoutY="83.0" text="0" />
+                  <Label fx:id="count_supply" layoutX="159.0" layoutY="120.0" text="0" />
+                  <Label fx:id="count_stb" layoutX="159.0" layoutY="152.0" text="0" />
+                  <Button fx:id="next_turn" layoutX="16.0" layoutY="558.0" mnemonicParsing="false" onAction="#next_turn" text="Next Turn" />
+                  <ComboBox fx:id="cmbCA" layoutX="12.0" layoutY="224.0" onAction="#cntAd" prefHeight="26.0" prefWidth="175.0" />
+                  <Label layoutX="12.0" layoutY="199.0" text="Chief Advisor" />
+                  <Label layoutX="15.0" layoutY="263.0" text="Field Marshal" />
+                  <ComboBox fx:id="cmbFM" layoutX="14.0" layoutY="291.0" onAction="#cntFm" prefHeight="26.0" prefWidth="172.0" />
+                  <ComboBox fx:id="cmbMS" layoutX="13.0" layoutY="358.0" onAction="#cntMs" prefHeight="26.0" prefWidth="174.0" />
+                  <Label layoutX="13.0" layoutY="331.0" text="Military Staff" />
+                  <Label layoutX="17.0" layoutY="403.0" text="Effect" />
+                  <Label layoutX="16.0" layoutY="438.0" text="Indistrial Complex" />
+                  <Label layoutX="16.0" layoutY="465.0" text="Military Factory" />
+                  <Label layoutX="16.0" layoutY="493.0" text="Supply" />
+                  <Label layoutX="16.0" layoutY="519.0" text="Stability" />
+                  <Label fx:id="efCCiv" layoutX="159.0" layoutY="438.0" text="0" />
+                  <Label fx:id="efCMil" layoutX="159.0" layoutY="465.0" text="0" />
+                  <Label fx:id="efCSup" layoutX="159.0" layoutY="493.0" text="0" />
+                  <Label fx:id="efCStb" layoutX="159.0" layoutY="519.0" text="0" />
+                  <Button layoutX="15.0" layoutY="596.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="58.0" text="Attack" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <Button fx:id="state_chec" layoutX="442.0" layoutY="293.0" mnemonicParsing="false" onAction="#atk_chec" text="Chekoslovakia" />
+      <Label fx:id="div_chec" layoutX="468.0" layoutY="323.0" style="-fx-background-color: #ffffff;" text="3" />
+      <Button fx:id="state_hun" layoutX="479.0" layoutY="336.0" mnemonicParsing="false" onAction="#atk_hun" text="Hungary" />
+      <Button fx:id="state_aus" layoutX="402.0" layoutY="336.0" mnemonicParsing="false" onAction="#atk_aus" text="Austria" />
+      <Button fx:id="state_yug" layoutX="462.0" layoutY="389.0" mnemonicParsing="false" onAction="#atk_yug" text="YUGOSLAVIA" />
+      <Button fx:id="state_rom" layoutX="568.0" layoutY="336.0" mnemonicParsing="false" onAction="#atk_rom" text="ROMANIA" />
+      <Button fx:id="state_ussr" layoutX="669.0" layoutY="141.0" mnemonicParsing="false" onAction="#atk_ussr" text="USSR" />
+      <Button fx:id="state_est" layoutX="515.0" layoutY="86.0" mnemonicParsing="false" onAction="#atk_est" text="ESTONIA" />
+      <Button fx:id="state_lat" layoutX="515.0" layoutY="129.0" mnemonicParsing="false" onAction="#atk_lat" text="LATVIA" />
+      <Button fx:id="state_lit" layoutX="488.0" layoutY="167.0" mnemonicParsing="false" onAction="#atk_lit" text="LITHUANIA" />
+      <Button fx:id="state_swe" layoutX="393.0" layoutY="86.0" mnemonicParsing="false" onAction="#atk_swe" text="SWEDEN" />
+      <Button fx:id="state_den" layoutX="324.0" layoutY="167.0" mnemonicParsing="false" onAction="#atk_den" text="DENMARK" />
+      <Button fx:id="state_nor" layoutX="324.0" layoutY="56.0" mnemonicParsing="false" onAction="#atk_nor" text="NORWAY" />
+      <Button fx:id="state_spa" layoutX="99.0" layoutY="471.0" mnemonicParsing="false" onAction="#atk_spa" text="SPAIN" />
+      <Button fx:id="state_ire" layoutX="72.0" layoutY="193.0" mnemonicParsing="false" onAction="#atk_ire" text="IRELAND" />
+      <Button fx:id="state_por" layoutX="16.0" layoutY="432.0" mnemonicParsing="false" onAction="#atk_por" text="PORTUGAL" />
+      <Button fx:id="state_bul" layoutX="585.0" layoutY="406.0" mnemonicParsing="false" onAction="#atk_bul" text="BULGARIA" />
+      <Button fx:id="state_yun" layoutX="559.0" layoutY="471.0" mnemonicParsing="false" onAction="#atk_yun" text="YUNANI" />
+      <Button fx:id="state_tur" layoutX="753.0" layoutY="432.0" mnemonicParsing="false" onAction="#atk_tur" text="TURKEY" />
+      <Button fx:id="state_alb" layoutX="505.0" layoutY="445.0" mnemonicParsing="false" onAction="#atk_alb" text="ALBANIA" />
+      <Label layoutX="90.0" layoutY="225.0" style="-fx-background-color: #ffffff;" text="1" />
+      <Label fx:id="div_spa" layoutX="104.0" layoutY="505.0" style="-fx-background-color: #ffffff;" text="4" />
+      <Label fx:id="div_por" layoutX="15.0" layoutY="463.0" style="-fx-background-color: #ffffff;" text="2" />
+      <Label fx:id="div_yug" layoutX="491.0" layoutY="419.0" style="-fx-background-color: #ffffff;" text="6" />
+      <Label fx:id="div_alb" layoutX="519.0" layoutY="475.0" style="-fx-background-color: #ffffff;" text="1" />
+      <Label fx:id="div_yun" layoutX="565.0" layoutY="505.0" style="-fx-background-color: #ffffff;" text="2" />
+      <Label fx:id="div_bul" layoutX="605.0" layoutY="436.0" style="-fx-background-color: #ffffff;" text="3" />
+      <Label fx:id="div_rom" layoutX="579.0" layoutY="367.0" style="-fx-background-color: #ffffff;" text="5" />
+      <Label fx:id="div_ussr" layoutX="677.0" layoutY="171.0" style="-fx-background-color: #ffffff;" text="25" />
+      <Label layoutX="533.0" layoutY="112.0" style="-fx-background-color: #ffffff;" text="1" />
+      <Label layoutX="565.0" layoutY="158.0" style="-fx-background-color: #ffffff;" text="1" />
+      <Label layoutX="527.0" layoutY="197.0" style="-fx-background-color: #ffffff;" text="1" />
+      <Label fx:id="div_swe" layoutX="402.0" layoutY="121.0" style="-fx-background-color: #ffffff;" text="2" />
+      <Label fx:id="div_nor" layoutX="344.0" layoutY="90.0" style="-fx-background-color: #ffffff;" text="1" />
+      <Label fx:id="div_den" layoutX="333.0" layoutY="197.0" style="-fx-background-color: #ffffff;" text="1" />
+      <Label fx:id="div_aus" layoutX="411.0" layoutY="367.0" style="-fx-background-color: #ffffff;" text="1" />
+      <Label fx:id="div_tur" layoutX="782.0" layoutY="463.0" style="-fx-background-color: #ffffff;" text="4" />
+      <Label fx:id="div_hun" layoutX="491.0" layoutY="359.0" style="-fx-background-color: #ffffff;" text="1" />
+      <Button fx:id="state_fin" layoutX="514.0" layoutY="30.0" mnemonicParsing="false" onAction="#atk_fin" text="FINLAND" />
+      <Label fx:id="div_fin" layoutX="555.0" layoutY="60.0" style="-fx-background-color: #ffffff;" text="3" />
+   </children>
+</AnchorPane>
